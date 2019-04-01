@@ -6,7 +6,10 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var player = new PlayerCharacter();
+            player.Name = "Sarah";
+     
+            PlayerDisplayer.Write(player);
         }
     }
 }
