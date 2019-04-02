@@ -6,10 +6,11 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            var player = new PlayerCharacter();
-            player.Name = "Sarah";
-     
-            PlayerDisplayer.Write(player);
+            PlayerCharacter player = null;
+            int days = player ?.DaysSinceLastLogin ?? -1; 
+            
+           
+            Console.WriteLine(days);
         }
     }
 }

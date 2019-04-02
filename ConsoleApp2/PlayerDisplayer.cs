@@ -16,15 +16,24 @@ namespace ConsoleApp2
             {
                 Console.WriteLine(player.Name);
             }
-            if (player.DaysSinceLastLogin == null)
-            {
-                Console.WriteLine("No value for DaysSinceLastLogin");
 
-            }
-            else
-            {
-                Console.WriteLine(player.DaysSinceLastLogin);
-            }
+            int days = player.DaysSinceLastLogin ?? -1;
+
+            /*int days = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1;*/
+
+            //int days = player.DaysSinceLastLogin.GetValueOrDefault(-1);
+            Console.WriteLine($"{player.DaysSinceLastLogin} days since last login");
+
+            //if (player.DaysSinceLastLogin.HasValue)
+            //{
+            //    Console.WriteLine(player.DaysSinceLastLogin.Value);
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No value for DaysSinceLastLogin");
+
+            //}
             if (player.DateofBirth == null)
             {
                 Console.WriteLine("No date of birth has been specified");
